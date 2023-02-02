@@ -103,6 +103,11 @@ Plugin {
   }
 }
 Plugin {
+  type=volume
+  Config {
+  }
+}
+Plugin {
   type=dclock
   Config {
     ClockFmt=%R
