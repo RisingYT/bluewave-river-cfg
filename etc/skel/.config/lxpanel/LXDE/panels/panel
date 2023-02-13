@@ -7,7 +7,7 @@ Global {
   margin=0
   widthtype=percent
   width=100
-  height=32
+  height=30
   transparent=1
   tintcolor=#2e3440
   alpha=255
@@ -19,7 +19,7 @@ Global {
   fontcolor=#ffffff
   background=0
   backgroundfile=/usr/share/lxpanel/images/background.png
-  iconsize=25
+  iconsize=27
 }
 Plugin {
   type=space
@@ -47,40 +47,6 @@ Plugin {
   }
 }
 Plugin {
-  type=space
-  Config {
-    Size=2
-  }
-}
-Plugin {
-  type=launchbar
-  Config {
-    Button {
-      id=pcmanfm.desktop
-    }
-    Button {
-      id=firefox.desktop
-    }
-  }
-}
-Plugin {
-  type=launchbar
-  Config {
-    Button {
-      id=org.manjaro.pamac.manager.desktop
-    }
-    Button {
-      id=org.midori_browser.Midori.desktop
-    }
-  }
-}
-Plugin {
-  type=space
-  Config {
-    Size=4
-  }
-}
-Plugin {
   type=taskbar
   expand=1
   Config {
@@ -98,12 +64,29 @@ Plugin {
   }
 }
 Plugin {
-  type=tray
+  type=batt
   Config {
+    BackgroundColor=#2E3440
+    ChargingColor1=#28f200
+    ChargingColor2=#22cc00
+    DischargingColor1=#ffee00
+    DischargingColor2=#d9ca00
+    HideIfNoBattery=0
+    AlarmCommand=notify-send "Battery low" --icon=battery-caution
+    AlarmTime=5
+    BorderWidth=1
+    Size=8
+    ShowExtendedInformation=0
+    BatteryNumber=0
   }
 }
 Plugin {
   type=volume
+  Config {
+  }
+}
+Plugin {
+  type=tray
   Config {
   }
 }
